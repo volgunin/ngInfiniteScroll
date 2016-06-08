@@ -1,3 +1,6 @@
-compile/*
 node_modules
-.tmp
+bower_components
+coverage
+
+# Debug log from npm
+npm-debug.log

@@ -1,42 +1,49 @@
 {
   "name": "ng-infinite-scroll",
   "version": "1.2.1",
+  "private": true,
   "description": "Infinite scrolling for AngularJS",
+  "main": "./dist/ng-infinite-scroll.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/sroze/ngInfiniteScroll.git"
+    "url": "git://github.com/volgunin/ngInfiniteScroll.git"
   },
-  "main": "build/ng-infinite-scroll.js",
-  "browser": "build/ng-infinite-scroll.js",
+  "browser": "./dist/ng-infinite-scroll.js",
   "scripts": {
-    "test": "grunt test:protractor-local"
+    "test": "grunt karma",
+    "debug": "karma start ./test/karma.conf.js --browsers=Chrome --single-run=false --debug"
   },
   "author": {
     "name": "Michelle Tilley",
     "email": "michelle@michelletilley.net",
     "url": "http://michelletilley.net"
   },
-  "contributors": [
-    {
-      "name": "Samuel ROZE",
-      "email": "samuel.roze@gmail.com",
-      "url": "http://sroze.io"
-    }
-  ],
+  "contributors": [{
+    "name": "Samuel ROZE",
+    "email": "samuel.roze@gmail.com",
+    "url": "http://sroze.io"
+  }],
   "license": "MIT",
   "readmeFilename": "README.md",
+  "dependencies": {},
   "devDependencies": {
-    "coffee-script": "~1.8.0",
-    "grunt": "~0.4.5",
-    "grunt-coffeelint": "~0.0.13",
-    "grunt-contrib-clean": "~0.6.0",
-    "grunt-contrib-coffee": "~0.12.0",
-    "grunt-contrib-concat": "~0.5.0",
-    "grunt-contrib-connect": "0.8.0",
-    "grunt-contrib-uglify": "~0.6.0",
-    "grunt-protractor-runner": "1.1.4",
-    "mkdirp": "0.5.0",
-    "protractor": "1.4.0",
-    "sauce-connect-launcher": "0.9.0"
+    "grunt": "0.x.x",
+    "grunt-contrib-concat": "0.x.x",
+    "grunt-contrib-jshint": "0.x.x",
+    "grunt-contrib-uglify": "0.x.x",
+    "grunt-karma": "*",
+    "grunt-wiredep": "2.x.x",
+    "jasmine-core": "2.x.x",
+    "jshint-stylish": "2.x.x",
+    "karma": "0.x.x",
+    "karma-chrome-launcher": "0.x.x",
+    "karma-coverage": "0.x.x",
+    "karma-firefox-launcher": "0.x.x",
+    "karma-ie-launcher": "0.x.x",
+    "karma-jasmine": "1.x.x",
+    "karma-phantomjs-launcher": "1.x.x",
+    "load-grunt-tasks": "3.x.x",
+    "lolex": "1.x.x",
+    "phantomjs-prebuilt": "2.x.x"
   }
 }
