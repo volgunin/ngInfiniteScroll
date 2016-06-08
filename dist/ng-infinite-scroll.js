@@ -118,7 +118,7 @@ angular.module('infinite-scroll', []);
 
                         scope.$on('$destroy', function scopeDestroy() {
                             if (_container) {
-                                _container.removeEventListener('scroll', handler, false);
+                                _container[0].removeEventListener('scroll', handler, false);
                             }
 
                             if (_checkInterval) {
@@ -175,13 +175,13 @@ angular.module('infinite-scroll', []);
                         // a jQuery selector as a string.
                         function changeContainer(newContainer) {
                             if (_container !== null) {
-                                _container.removeEventListener('scroll', handler, false);
+                                _container[0].removeEventListener('scroll', handler, false);
                             }
 
                             _container = newContainer;
 
                             if (_container !== null) {
-                                _container.addEventListener('scroll', handler, false);
+                                _container[0].addEventListener('scroll', handler, false);
                             }
                         }
                         changeContainer(_windowElement);
