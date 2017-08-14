@@ -18,6 +18,6 @@
   ],
   "devDependencies": {},
   "dependencies": {
-    "angular": "1.5.x"
+    "angular": "1.6.x"
   }
 }
